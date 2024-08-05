@@ -8,7 +8,7 @@ module.exports = function tokml(geojson, options) {
     documentDescription: undefined,
     name: 'name',
     description: 'description',
-    simplestyle: false,
+    simpleStyle: false,
     timestamp: 'timestamp'
   }
 
@@ -35,7 +35,7 @@ function feature(options, styleHashesArray) {
 
     var styleDefinition = '',
       styleReference = ''
-    if (options.simplestyle) {
+    if (options.simpleStyle) {
       var styleHash = hashStyle(_.properties)
       if (styleHash) {
         if (geometry.isPoint(_.geometry) && hasMarkerStyle(_.properties)) {
@@ -61,7 +61,7 @@ function feature(options, styleHashesArray) {
     }
 
     var attributes = {}
-    if (_.id) attributes.id = _.id.toString();
+    if (_.id) attributes.id = _.id.toString()
     return (
       styleDefinition +
       tag(

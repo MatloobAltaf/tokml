@@ -3,7 +3,7 @@
 var tokml = require('./'),
   rw = require('rw'),
   argv = require('minimist')(process.argv.slice(2), {
-    boolean: 'simplestyle'
+    boolean: 'simpleStyle'
   })
 
 if (process.stdin.isTTY && !argv._[0]) {
