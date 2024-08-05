@@ -5,8 +5,8 @@ usage:
     tokml file.geojson
     tokml < file.geojson > file.kml
 
-    --simplestyle
-      enable simplestyle icon translation
+    --simpleStyle
+      enable simpleStyle icon translation
     --name
       property for <name>
     --description

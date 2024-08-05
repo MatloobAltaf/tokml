@@ -19,14 +19,13 @@ as a binary:
     npm install -g @maphubs/tokml
     tokml file.geojson > file.kml
     tokml < file.geojson > file.kml
-    
 
 ## Importing
 
 ESM
 
 ```js
-import * as tokml from "@maphubs/tokml"
+import * as tokml from '@maphubs/tokml'
 ```
 
 CommonJS
@@ -39,26 +38,25 @@ Browser
 
 You can also load the built `tokml.js` file directly in a browser script tag and access it globally as `tokml()`
 
-
 ## Example
 
 ```js
 // kml is a string of KML data, geojsonObject is a JavaScript object of
 // GeoJSON data
-var kml = tokml(geojsonObject);
+var kml = tokml(geojsonObject)
 
 // grab name and description properties from each object and write them in
 // KML
 var kmlNameDescription = tokml(geojsonObject, {
-  name: "name",
-  description: "description",
-});
+  name: 'name',
+  description: 'description'
+})
 
 // name and describe the KML document as a whole
 var kmlDocumentName = tokml(geojsonObject, {
-  documentName: "My List Of Markers",
-  documentDescription: "One of the many places you are not I am",
-});
+  documentName: 'My List Of Markers',
+  documentDescription: 'One of the many places you are not I am'
+})
 ```
 
 ## API
@@ -94,7 +92,7 @@ for the full document.
 
 **[simplestyle-spec](https://github.com/mapbox/simplestyle-spec)** support:
 
-- `simplestyle`: set to `true` to convert simplestyle-spec styles into KML styles
+- `simpleStyle`: set to `true` to convert simplestyle-spec styles into KML styles
 
 ## Development
 
